@@ -1,0 +1,24 @@
+send()- send(int sockfd, const void *buf, size_t len, int flags);
+    CONNECTION only
+    buf = message
+    len = message length
+    FLAGS = bitwise OR of zero or more of the following flags https://linux.die.net/man/2/send 
+sendto()- sendto(int sockfd, const void *buf, size_t len, int flags,
+               const struct sockaddr *dest_addr, socklen_t addrlen);
+    if sendto is used on connection mode, dest_addr and addrlen are ignored.
+write() - equivalent to send with flags parameter of 0, CONNECTION only
+
+recv()
+	usually CONNECTION only
+recvfrom()
+read()
+
+gcc -o tfc tfc.c
+./tfc 127.0.0.1 8080 file.zip/txt
+./tfc 10.10.1.100 8080
+
+md5sum sample_file.txt
+7599e6053a39dec1480ed851fa3abbe3
+
+md5sum sample_file.zip
+4cf367df5b245a00244bb3283a9ae57c 
