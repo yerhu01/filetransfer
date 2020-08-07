@@ -1,0 +1,40 @@
+At home, open two putty terminals and go to a1 folder
+
+gcc -o ufs ufs.c
+gcc -o ufc ufc.c
+
+in one terminal
+./ufs 
+in other terminal
+./ufc
+
+change ip
+host b, ufs directory textfiles
+host a, ufc
+
+open flexi net
+host a 
+	cd /share
+host b
+	ch /share
+	
+compile
+---------
+1) ./ufs direct
+2) ./ufs directory
+	./ufc unknown
+3) ./ufs directory
+	./ufc 1k.txt
+	ANSWER: 1c58752a83d5dae28c75cec59c6932bc  1k.txt
+4) ./ufs directory
+	./ufc 10k.txt
+ANSWER: bdd3830e0cd04371a2aa938b3dad51b9  10k.txt
+5) ./ufs directory
+	./ufc 1m.txt
+ANSWER: 02ad33bf35aeb7f719560bfd38910b6e  1m.txt
+6)./ufs directory
+	./ufc 1k.txt
+	./ufc 10k.txt
+	
+
+	
